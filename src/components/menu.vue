@@ -62,7 +62,7 @@
     </div>
     <section class="home-section">
         <div class="home-content">
-        <img src="../img/menu-control.svg" alt="" class='bx-menu'>
+        <img src="../img/Hamburger_3.svg" alt="" class='bx-menu'>
         <span class="text">我的文档</span>
         </div>
     </section>
