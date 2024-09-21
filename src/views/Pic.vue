@@ -1,11 +1,11 @@
 <script setup>
 import person from '@/components/person.vue'
-import tinymcelist from '@/components/tinymce-list.vue'
+import tinymce_pic from '@/components/tinymce-pic.vue'
 </script>
 
 <template>
   <div class="person"><person/></div>
-  <div class="editor"><tinymcelist/></div>
+  <div class="editor"><tinymce_pic/></div>
 </template>
 <style>
 .editor{

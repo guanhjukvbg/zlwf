@@ -14,7 +14,7 @@
 </script>
 <style scoped>
 .category{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 .category-tit{
     font-family: Source Han Sans;
@@ -40,5 +40,8 @@
     background-color: aquamarine;
     text-align: center;
     line-height: 140px;
+}
+.category-item .item:nth-child(1){
+    margin-left: 0px;
 }
 </style>

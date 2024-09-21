@@ -247,13 +247,13 @@
   position: relative;
   background: #F5F7F8;
   height: 100vh;
-  left: 220px;
-  width: calc(100% - 260px);
+  left: 14%;
+  width: calc(100% - 14%);
   transition: all 0.5s ease;
 }
 .sidebar.close ~ .home-section{
-  left: 70px;
-  width: calc(100% - 78px);
+  left: 4.5%;
+  width: calc(100% - 4.5%);
 }
 .home-section .home-content{
   height: 60px;
@@ -266,7 +266,7 @@
   font-size: 35px;
 }
 .home-section .home-content img{
-  margin-left:25px;
+  margin-left:35px;
   margin-right: 10px;
   width: 30px;
   height: 35px;

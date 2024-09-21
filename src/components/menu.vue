@@ -65,28 +65,19 @@
         <img src="../img/Hamburger_3.svg" alt="" class='bx-menu'>
         <span class="text">我的文档</span>
         </div>
-        <category/>
-        <words/>
     </section>
 </template>
 <script setup>
 import '../assets/menu-style.css'
-import category from '@/components/category.vue';
-import words from '@/components/words.vue'
 import { ref, onMounted } from 'vue'
-import {useRouter} from 'vue-router'
+import {useRouter,useRoute} from 'vue-router'
 const router=useRouter()
+const route=useRoute()
 const toText=()=>{
-  router.push('/Texts')
-}
-const toMath=()=>{
-  router.push('/Math')
-}
-const toPic=()=>{
-  router.push('/Pic')
+  router.push('about')
 }
 const toList=()=>{
-    router.push('/listdemo')
+    router.push('listdemo')
 }
 
 onMounted(() => {
