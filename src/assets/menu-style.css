@@ -176,7 +176,7 @@
   pointer-events: none;
 }
 .sidebar .nav-links li:hover .sub-menu.blank{
-  top: 50%;
+ 
   transform: translateY(-50%);
 }
 .sidebar .profile-details{

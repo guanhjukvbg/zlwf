@@ -37,54 +37,13 @@
                     <li>知识库</li>
                 </ul>
             </li>
-            
-            <li>
-                <img class="icon" src="../img/Bin.svg" alt="">
-                <span class="link_name">回收站</span>
-                <ul class="sub-menu blank">
-                <li class="link_name">回收站</li>
-                </ul>
-            </li>
             <li>
                 <div class="iocn-link">
-                
-                   
-                    <span class="link_name">Plugins</span>
-               
-                
+                    <img class="icon" src="../img/Bin.svg" alt="">
+                    <span class="link_name">回收站</span>
                 </div>
                 <ul class="sub-menu">
-                <li class="link_name">Plugins</li>
-                <li>UI Face</li>
-                <li>Pigments</li>
-                <li>Box Icons</li>
-                </ul>
-            </li>
-            <li>
-               
-               
-                <span class="link_name">Explore</span>
-               
-                <ul class="sub-menu blank">
-                <li class="link_name">Explore</li>
-                </ul>
-            </li>
-            <li>
-               
-               
-                <span class="link_name">History</span>
-                
-                <ul class="sub-menu blank">
-                <li class="link_name">History</li>
-                </ul>
-            </li>
-            <li>
-                
-              
-                <span class="link_name">Setting</span>
-               
-                <ul class="sub-menu blank">
-                <li class="link_name">Setting</li>
+                    <li>回收站</li>
                 </ul>
             </li>
             <li>
