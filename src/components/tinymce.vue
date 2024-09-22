@@ -5,7 +5,40 @@
 </template>
 
 <script>
+import MindMap from 'simple-mind-map'
+import MiniMap from 'simple-mind-map/src/plugins/MiniMap.js'
+import Watermark from 'simple-mind-map/src/plugins/Watermark.js'
+import KeyboardNavigation from 'simple-mind-map/src/plugins/KeyboardNavigation.js'
+import ExportPDF from 'simple-mind-map/src/plugins/ExportPDF.js'
+import ExportXMind from 'simple-mind-map/src/plugins/ExportXMind.js'
+import Export from 'simple-mind-map/src/plugins/Export.js'
+import Drag from 'simple-mind-map/src/plugins/Drag.js'
+import Select from 'simple-mind-map/src/plugins/Select.js'
+import RichText from 'simple-mind-map/src/plugins/RichText.js'
+import AssociativeLine from 'simple-mind-map/src/plugins/AssociativeLine.js'
+import TouchEvent from 'simple-mind-map/src/plugins/TouchEvent.js'
+import NodeImgAdjust from 'simple-mind-map/src/plugins/NodeImgAdjust.js'
+import SearchPlugin from 'simple-mind-map/src/plugins/Search.js'
+import Painter from 'simple-mind-map/src/plugins/Painter.js'
+import ScrollbarPlugin from 'simple-mind-map/src/plugins/Scrollbar.js'
+import Formula from 'simple-mind-map/src/plugins/Formula.js'
+import Cooperate from 'simple-mind-map/src/plugins/Cooperate.js'
 
+// 注册插件
+MindMap.usePlugin(MiniMap)
+  .usePlugin(Watermark)
+  .usePlugin(Drag)
+  .usePlugin(KeyboardNavigation)
+  .usePlugin(ExportPDF)
+  .usePlugin(ExportXMind)
+  .usePlugin(Export)
+  .usePlugin(Select)
+  .usePlugin(AssociativeLine)
+  .usePlugin(NodeImgAdjust)
+  .usePlugin(TouchEvent)
+  .usePlugin(SearchPlugin)
+  .usePlugin(Painter)
+  .usePlugin(Formula)
 export default {
   mounted() {
     
@@ -13,11 +46,11 @@ export default {
       selector: '#tinymce',
       language: "zh_CN",
       placeholder:'请在此输入内容',
-      plugins: 'save quickbars formatpainter paste preview searchreplace autolink directionality visualblocks visualchars fullscreen image link  code codesample table charmap kityformula-editor hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern help emoticons autosave',
+      plugins: 'mindmap_plugin save quickbars formatpainter paste preview searchreplace autolink directionality visualblocks visualchars fullscreen image link  code codesample table charmap kityformula-editor hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern help emoticons autosave',
       quickbars_insert_toolbar: 'quickimage quicktable',
       quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote',
       toolbar: [
-        'undo redo formatpainter forecolor backcolor bold italic underline strikethrough lineheight  blocks fontfamily fontsize customStyles',
+        'mindmap undo redo formatpainter forecolor backcolor bold italic underline strikethrough lineheight  blocks fontfamily fontsize customStyles',
         'save preview alignleft aligncenter alignright alignjustify link image outdent indent table emoticons code hr bullist numlist blockquote subscript superscript removeformat kityformula-editor ',
       ],
       block_formats:
@@ -180,9 +213,11 @@ export default {
         };
     },
     });
-  },
-  methods: {
     
+  },
+  
+  methods: {
+       
 }
 }
 </script>

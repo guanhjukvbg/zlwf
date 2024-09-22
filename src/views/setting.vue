@@ -28,7 +28,7 @@
                     <li>设置</li>
                 </ul>
             </li>
-            <li>
+            <li @click="toBin">
                 <div class="iocn-link">
                     <img class="icon" src="../img/Bin.svg" alt="">
                     <span class="link_name">回收站</span>
@@ -56,12 +56,12 @@
         <img src="../img/Hamburger_3.svg" alt="" class='bx-menu'>
         <span class="text">设置</span>
         </div>
-        
+        <Info />
     </section>
 </template>
 <script setup>
 import '../assets/menu-style.css'
-
+import Info from '@/components/info.vue'
 import { ref, onMounted } from 'vue'
 import {useRouter} from 'vue-router'
 const router=useRouter()
@@ -82,6 +82,9 @@ const toList=()=>{
 }
 const toSet=()=>{
     router.push('/setting')
+}
+const toBin=()=>{
+    router.push('/bin')
 }
 onMounted(() => {
     let arrow = document.querySelectorAll(".arrow");

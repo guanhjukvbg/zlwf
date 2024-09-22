@@ -54,16 +54,14 @@
     <section class="home-section">
         <div class="home-content">
         <img src="../img/Hamburger_3.svg" alt="" class='bx-menu'>
-        <span class="text">我的文档</span>
+        <span class="text">回收站</span>
         </div>
-        <category/>
-        <page/>
+        <delete1/>
     </section>
 </template>
 <script setup>
 import '../assets/menu-style.css'
-import category from '@/components/category.vue';
-import page from '@/components/PaginationComponent.vue'
+import delete1 from '@/components/delete.vue'
 import { ref, onMounted } from 'vue'
 import {useRouter} from 'vue-router'
 const router=useRouter()

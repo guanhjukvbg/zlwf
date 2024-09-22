@@ -1,5 +1,7 @@
 <template>
-21
+<div class="words">
+    
+</div>
 </template>
 <script>
 
