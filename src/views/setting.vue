@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <div class="logo-details" @click="toHome">
+        <div class="logo-details"  @click="toHome">
             <img src="../img/cloud-fill (1).svg" alt="智链文辅">
             <span class="logo_name">智链文辅</span>
         </div>
@@ -54,16 +54,14 @@
     <section class="home-section">
         <div class="home-content">
         <img src="../img/Hamburger_3.svg" alt="" class='bx-menu'>
-        <span class="text">我的文档</span>
+        <span class="text">设置</span>
         </div>
-        <category/>
-        <page/>
+        
     </section>
 </template>
 <script setup>
 import '../assets/menu-style.css'
-import category from '@/components/category.vue';
-import page from '@/components/PaginationComponent.vue'
+
 import { ref, onMounted } from 'vue'
 import {useRouter} from 'vue-router'
 const router=useRouter()
