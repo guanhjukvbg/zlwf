@@ -74,7 +74,7 @@ import {useRouter,useRoute} from 'vue-router'
 const router=useRouter()
 const route=useRoute()
 const toText=()=>{
-  router.push('about')
+  router.push('Texts')
 }
 const toList=()=>{
     router.push('listdemo')

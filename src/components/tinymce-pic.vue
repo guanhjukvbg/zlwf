@@ -13,12 +13,12 @@
         selector: '#tinymce-math',
         language: "zh_CN",
         placeholder:'请在此输入内容',
-        plugins: 'save quickbars formatpainter paste preview searchreplace autolink directionality visualblocks visualchars fullscreen image link  codesample table charmap kityformula-editor hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern help emoticons autosave',
-        quickbars_insert_toolbar: 'quickimage quicktable image',
+        plugins: 'websearch_plugin save quickbars formatpainter paste preview searchreplace autolink directionality visualblocks visualchars fullscreen image link  codesample table charmap kityformula-editor hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern help emoticons autosave summary_plugin abstract_plugin mindmap_plugin ',
+        quickbars_insert_toolbar: 'quickimage',
         quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote',
         toolbar: [
-          'undo redo formatpainter forecolor backcolor bold italic underline strikethrough lineheight  blocks fontfamily fontsize customStyles',
-          'save  preview image emoticons table bullist numlist alignleft aligncenter alignright alignjustify link  outdent indent   hr  blockquote subscript superscript  kityformula-editor  removeformat ',
+          'websearch undo redo formatpainter forecolor backcolor bold italic underline strikethrough lineheight  blocks fontfamily fontsize customStyles',
+          'save  preview image emoticons table bullist numlist alignleft aligncenter alignright alignjustify link  outdent indent   hr  blockquote subscript superscript  summary abstract mindmap removeformat ',
         ],
         block_formats:
           '标题1=h1;标题2=h2;标题3=h3;标题4=h4;标题5=h5;标题6=h6;段落=p;div', // formatselect 的配置

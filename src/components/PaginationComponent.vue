@@ -4,7 +4,6 @@
         <hr style="margin-top: 20px;width: 95%;margin-left: 10px;">
     </div>
     <div class="page">
-      <!-- 数据渲染 -->
       <ul>
         <li v-for="item in paginatedData" :key="item.id">
           <div class="page-tit">{{ item.title }}</div>
@@ -14,7 +13,6 @@
         </li>
       </ul>
     </div>
-      <!-- 分页控制 -->
        <div class="pageSize">
         <ul>
           <li v-for="page in pageCount" :key="page" @click="setPage(page)">
@@ -30,9 +28,10 @@
   
   <script setup>
   import { ref, computed } from 'vue';
-  
+  import {useRouter} from 'vue-router'
+  const router=useRouter()
   const items = [
-    { id: 1, title: '工作报告',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
+    { id: 1, title: '毛泽东思想的形成与发展',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
     { id: 2, title: '大学物理试卷A',tag:'数学类文档',time:'2024年9月23日',background:'#FFC6AB'},
     { id: 3, title: '智在指尖，爱在夕阳',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
     { id: 4, title: '日记9.22',tag:'多图类文档',time:'2024年9月22日',background:'#ABCCF9'},
@@ -62,7 +61,7 @@
   }
 
   const toWrite=() =>{
-
+    router.push('/Texts')
   }
   </script>
   

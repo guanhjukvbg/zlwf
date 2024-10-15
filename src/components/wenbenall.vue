@@ -1,13 +1,14 @@
 <template>
     <div class="word">
+        <br>
+        <div class="word-tit">文本类文档</div>
         <hr style="margin-top: 20px;width: 95%;margin-left: 10px;">
     </div>
     <div class="page">
       <ul>
         <li v-for="item in paginatedData" :key="item.id">
           <div class="page-tit">{{ item.title }}</div>
-          <div class="page-delete" >删除</div>
-          <div class="page-back">还原</div>
+          <div class="page-change" @click="toWrite">编辑</div>
           <div class="page-tag" :style="{ backgroundColor: item.background }">{{ item.tag }}</div>
           <div class="page-time">{{ item.time }}</div>
         </li>
@@ -28,24 +29,20 @@
   
   <script setup>
   import { ref, computed } from 'vue';
-  
+  import {useRouter} from 'vue-router'
+  const router=useRouter()
   const items = [
-    { id: 1, title: '职业发展规划',tag:'文本类文档',time:'删除于2024年9月21日 23:14',background:'#D0D1D2'},
-    { id: 2, title: '日记9.10',tag:'多图类文档',time:'删除于2024年9月20日 15:44',background:'#ABCCF9'},
-    { id: 3, title: '2019-线性代数期中试卷',tag:'数学类文档',time:'删除于2024年9月20日 09:46',background:'#FFC6AB'},
-    { id: 4, title: '2020-线性代数期中试卷',tag:'数学类文档',time:'删除于2024年9月20日 08:17',background:'#FFC6AB'},
-    { id: 5, title: '2021-线性代数期中试卷',tag:'数学类文档',time:'删除于2024年9月20日 00:50',background:'#FFC6AB'},
-    { id: 6, title: '今日学习计划9.11',tag:'列表清单',time:'删除于2024年9月19日 23:55',background:'#D195AF'},
-    { id: 7, title: '2019-线性代数期末试卷',tag:'数学类文档',time:'删除于2024年9月19日 21:03',background:'#FFC6AB'},
-    { id: 8, title: '中国近代史纲要题库(2)',tag:'文本类文档',time:'删除于2024年9月19日 11:07',background:'#D0D1D2'},
-    { id: 9, title: '历史小组作业',tag:'文本类文档',time:'删除于2024年9月18日 10:36',background:'#D0D1D2'},
-    { id: 10, title: '中国近代史纲要题库(1)',tag:'文本类文档',time:'删除于2024年9月18日 10:10',background:'#D0D1D2'},
-    { id: 11, title: '职业发展规划草稿',tag:'文本类文档',time:'删除于2024年9月17日 23:14',background:'#D0D1D2'},
-    { id: 12, title: '日记9.04',tag:'多图类文档',time:'删除于2024年9月17日 15:44',background:'#ABCCF9'},
-    { id: 13, title: '日记9.03',tag:'数学类文档',time:'删除于2024年9月16日 09:46',background:'#ABCCF9'},
-    { id: 14, title: '2020-线性代数期中试卷',tag:'数学类文档',time:'删除于2024年9月12日 08:17',background:'#FFC6AB'},
-    { id: 15, title: '概率论题库',tag:'数学类文档',time:'删除于2024年9月12日 00:50',background:'#FFC6AB'},
-    { id: 16, title: '工作计划9.01',tag:'列表清单',time:'删除于2024年9月11日 23:55',background:'#D195AF'},
+    { id: 1, title: '毛泽东思想的形成与发展',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
+    { id: 2, title: '习近平新时代中国特色社会主义思想',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
+    { id: 3, title: '智在指尖，爱在夕阳',tag:'文本类文档',time:'2024年9月23日',background:'#D0D1D2'},
+    { id: 4, title: '第四周会会议总结',tag:'文本类文档',time:'2024年9月22日',background:'#D0D1D2'},
+    { id: 5, title: '第三周会会议总结',tag:'文本类文档',time:'2024年9月22日',background:'#D0D1D2'},
+    { id: 6, title: '第二周会会议总结',tag:'文本类文档',time:'2024年9月21日',background:'#D0D1D2'},
+    { id: 7, title: '科技创新对企业发展的影响感想',tag:'文本类文档',time:'2024年9月21日',background:'#D0D1D2'},
+    { id: 8, title: '军事理论论文',tag:'文本类文档',time:'2024年9月20日',background:'#D0D1D2'},
+    { id: 9, title: '第一周会会议总结',tag:'文本类文档',time:'2024年9月18日',background:'#D0D1D2'},
+    { id: 10, title: '毛概作业2',tag:'文本类文档',time:'2024年9月16日',background:'#D0D1D2'},
+    { id: 11, title: '毛概作业1',tag:'文本类文档',time:'2024年9月16日',background:'#D0D1D2'},
   ];
   
   const pageSize = 10; 
@@ -65,6 +62,9 @@
     currentPage.value = page;
   }
 
+  const toWrite=() =>{
+    router.push('/Texts')
+  }
   </script>
   
   <style scoped>
@@ -74,13 +74,13 @@
     }
     .word .word-tit{
         font-family: Source Han Sans;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         line-height: normal;
         letter-spacing: 0em;
         font-variation-settings: "opsz" auto;
         font-feature-settings: "kern" on;
-        color: rgba(7, 7, 7, 0.341);
+        color: rgba(0, 0, 0, 0.5);
     }
   .page ul li{
     width: 92.5%;
@@ -96,16 +96,9 @@
     margin-top: 0px;
     float: left;
   }
-  .page ul li .page-back{
+  .page ul li .page-change{
     float: right;
     color: #003AD2;
-    margin-top: 5px;
-    margin-right: 30px;
-    
-  }
-  .page ul li .page-delete{
-    float: right;
-    color: #D20000;
     margin-top: 5px;
     margin-right: 30px;
     

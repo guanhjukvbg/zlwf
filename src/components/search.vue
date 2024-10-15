@@ -7,6 +7,7 @@
 <style>
 .search{
     height:90vh;
-    width:100%
+    background-color: rgb(254, 254, 254);
+    border-radius: 10px;
 }
 </style>
