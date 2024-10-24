@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "dom-to-image": "^2.6.0",
+    "dom-to-semantic-markdown": "^1.2.14",
     "simple-mind-map": "^0.11.1",
+    "test12": "file:",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },

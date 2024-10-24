@@ -23,5 +23,8 @@
     "LICENSE.txt"
   ],
   "author": "Ephox Corporation DBA Tiny Technologies, Inc",
-  "license": "GPL-2.0-or-later"
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "@tinymce/oxide-icons-default": "file:"
+  }
 }
